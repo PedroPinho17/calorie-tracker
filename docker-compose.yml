@@ -1,0 +1,22 @@
+services:
+  postgres:
+    image: postgres:17
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-calorie}
+      # Valor por defeito só serve para desenvolvimento local; muda-o (via .env) fora daqui.
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-calorie}
+      POSTGRES_DB: ${POSTGRES_DB:-calorie_tracker}
+    ports:
+      # Só acessível a partir desta máquina (não fica exposto na rede local).
+      - "127.0.0.1:5434:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $${POSTGRES_USER} -d $${POSTGRES_DB}"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+    restart: unless-stopped
+
+volumes:
+  pgdata:
