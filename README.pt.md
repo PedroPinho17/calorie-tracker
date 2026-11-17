@@ -2,6 +2,8 @@
 
 [English](README.md) · **Português**
 
+[![Tests](https://github.com/PedroPinho17/calorie-tracker/actions/workflows/tests.yml/badge.svg)](https://github.com/PedroPinho17/calorie-tracker/actions/workflows/tests.yml)
+
 Tira uma foto à refeição e vê as calorias e macros. O Gemini identifica os alimentos e estima as gramas; os valores nutricionais vêm da Tabela da Composição de Alimentos do INSA, da USDA FoodData Central e do Open Food Facts (códigos de barras).
 
 Web (Next.js) e app mobile (Expo) sobre a mesma API (NestJS + Postgres).
