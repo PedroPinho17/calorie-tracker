@@ -2,6 +2,8 @@
 
 **English** · [Português](README.pt.md)
 
+[![Tests](https://github.com/PedroPinho17/calorie-tracker/actions/workflows/tests.yml/badge.svg)](https://github.com/PedroPinho17/calorie-tracker/actions/workflows/tests.yml)
+
 Snap a photo of your meal and get its calories and macros. Gemini identifies the foods and estimates their weight; nutrition data comes from the Portuguese Food Composition Table (INSA), USDA FoodData Central and Open Food Facts (barcodes).
 
 A web app (Next.js) and a mobile app (Expo) on top of the same API (NestJS + Postgres). The interface is available in English and Portuguese.
